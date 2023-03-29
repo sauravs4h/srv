@@ -25,14 +25,17 @@ Workingproflist.post("/addWorker", async (req, res) => {
 
 // for getting category in page
 
-Workingproflist.get("/getWorker", async (req, res) => {
+Workingproflist.get("/getWorker/:clickedservice", async (req, res) => {
+  
+  let selectedservice=req.params.clickedservice
   try {
-    const data = await WorkingProfModel.find();
+    const data = await WorkingProfModel.find({service:selectedservice});
     res.json(data);
   } catch (error) {
     res.send("404 Not found");
   }
 });
+
 
 
 

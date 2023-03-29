@@ -19,4 +19,5 @@ app.listen(8080,async()=>{
    } catch (error) {
        console.log("something went wrong with connection");
    }
+   console.log("8080 is working")
 })
