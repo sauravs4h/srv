@@ -49,6 +49,9 @@
 
       let div = document.createElement("div");
 
+      let services = document.createElement("h2");
+      services.innerText=element.service;
+
       let img = document.createElement("img");
       img.setAttribute("src", element.img);
 
@@ -60,11 +63,11 @@
       let discription = document.createElement("p");
       let str = element.desc;
 
-      discription.innerText = `${str.substring(0, 50)}...`;
+      discription.innerText = `${str.substring(0, 100)}...`;
     //   let price = document.createElement("h4");
 
     //   price.innerHTML = `<h4>&#8377; ${element.rate}</h4>`;
-      div.append(img, discription);
+      div.append(img,services, discription);
 
       document.querySelector("#append-div").append(div);
     });
@@ -80,10 +83,6 @@
     //localStorage.setItem("setid",element.id)
 
     window.location.href="prof.html";
-
-
-
-
     
   }
 </script>
